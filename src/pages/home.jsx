@@ -37,7 +37,6 @@ const HomePage = () => {
     const {filesUploaded} = res
     updateDoc(reference, {uploads: [...tenant.uploads, ...filesUploaded]})
   }
-  
   useEffect(() => {
     console.log({tenant})
   },[tenant])
