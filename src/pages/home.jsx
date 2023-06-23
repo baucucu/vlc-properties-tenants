@@ -22,7 +22,7 @@ const HomePage = () => {
   const searchParams = new URLSearchParams(document.location.search)
   const [pickerOpen, setPickerOpen] = useState(false)
   
-  const tenantId = searchParams.get('id')
+  const tenantId = searchParams.get('tenantId')
   const reference = doc(db, "tenants", tenantId);
   const [tenant, loading, error] = useDocumentData(reference);
   
